@@ -1,0 +1,443 @@
+/* 
+====== THINGS I WILL DO ======
+    1. Inshallah I will complete full project
+    2. Layout With CSS Grid and Flexbox
+    3. BEM Metholodgy
+    4. Clean Code with Proper Comment
+*/
+/* Import google font */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*  
+    font-family: 'Inter', sans-serif;
+    font-family: 'Architects Daughter', cursive;
+ */
+
+:root {
+    --indigo: #5D5DFF;
+    --light-indigo: #CBCCFF;
+    --light-ash: #D9E3EA;
+    --deep-ash: #9BA9B4;
+    --green: #36A269;
+    --light-green: #C6F6D5;
+}
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reusable Element */
+.wrapper {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: .9rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: .2rem;
+}
+.hand_writing-heading{
+    color:var(--indigo);
+    font-size: 1rem;
+    font-family: 'Architects Daughter', cursive;
+}
+.deep-ash-color{
+    color: var(--deep-ash);
+}
+.indigo-color{
+    color: var(--indigo);
+}
+body {
+    background: #000;
+    color: var(--light-ash);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+header {
+    padding: .4rem 0 0 0;
+}
+
+/* Nav Bar with logo */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 .2rem;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--deep-ash);
+}
+
+.sign_up_btn {
+    background-color: var(--indigo);
+    color: white;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--light-ash);
+    line-height: 5rem;
+}
+
+.hero p {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.start_trial-btn {
+    background-color: var(--indigo);
+    color: white;
+    margin-right: .3rem;
+}
+
+.learn_more-btn {
+    background-color: #33363A;
+    margin-left: .3rem;
+    color: white;
+}
+
+.video-section {
+    display: block;
+    background-image: url(./src/img/hero-video-image.jpg);
+    background-size: cover;
+    max-width: 80%;
+    margin: 4rem auto;
+    min-height: 30rem;
+    display: grid;
+    place-content: center;
+}
+
+.video-section i {
+    font-size: 1rem;
+    background: rgba(255, 255, 255, .8);
+    padding: 2rem 2.2rem;
+    border-radius: 50%;
+}
+
+/* Icon box section */
+.icon_box-section{
+    text-align: center;
+    border-bottom: 1px solid #2c3135;
+}
+.icon_box-section h3{
+    color: #D9E3EA;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.icon_box-section > p{
+    color: var(--deep-ash);
+    line-height: 1.5rem;
+}
+.icon-boxes{
+    /* max-width: 80%; */
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.icon_box{
+    flex: 0 0 300px;
+    /* background: skyblue; */
+    padding: 1rem;
+}
+.icon_box i {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 50%;
+    background: var(--indigo);
+    color: white;
+}
+.icon_box h5{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .8rem;
+}
+.icon_box p{
+    font-weight: 300;
+    color: var(--deep-ash);
+    font-size: .9rem;
+}
+
+/* Two Column section (our product section) */
+.two_col_section{
+    text-align: center;
+    margin: 3rem auto;
+    border-bottom: 1px solid #2c3135;
+}
+.two_col_section h4{
+    background: #C6F6D5;
+    color: var(--green);
+    display: inline-block;
+    padding: .4rem .91rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+.two_col_section  h3{
+    color: #D9E3EA;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.two_col_section > p{
+    color: var(--deep-ash);
+    line-height: 1.5rem;
+}
+
+/* Two column  */
+.two_col{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: left;
+}
+.two-col-child{
+    flex: 0 0 500px;
+}
+.two_col .first{
+    padding:0 0 0 1.5rem;
+}
+.two_col .first > h5{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: .8rem 0;
+}
+.two_col .first > p{
+    font-size: .9rem;
+    color: var(--deep-ash);  
+    margin-bottom: 1rem;
+}
+
+.two_col .first ul li{
+    margin: .4rem 0;
+    display: flex;
+    align-items: center;
+}
+.two_col .first ul li i {
+    color: var(--green);
+    margin: 0 .5rem 0 0;
+}
+.two_col .first ul li p {
+    font-size: .9rem;
+    color: var(--deep-ash);
+    font-weight: normal;
+}
+.second img{
+    max-width: 100%;
+}
+
+.two_col_section .second{
+    flex-wrap: wrap;
+}
+/* testimonial Section */
+
+.testimonial{
+    text-align: center;
+}
+.testimonial  h3{
+    color: #D9E3EA;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.testimonial > p{
+    color: var(--deep-ash);
+    line-height: 1.5rem;
+}
+.testimonial-boxes{
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.testimonial-box{
+    flex: 0 0 350px;
+    background: #25282C;
+    padding: 2rem;
+    text-align: left;
+    position: relative;
+}
+.testimonial-box img{
+    max-width: 50px;
+    border-radius: 50%;
+}
+.testimonial-box > p {
+    color: var(--deep-ash);
+    margin: 1rem 0;
+}
+.testimonial-box > h6 {
+    color: var(--light-ash);
+    font-weight: 300;
+    letter-spacing: .04rem;
+
+}
+.testimonial-box::before{
+    content: '"';
+    position: absolute;
+    color: #5D5DFF;
+    z-index: 999;
+    top: .8rem;
+    left: 4rem;
+    font-size: 4rem;
+}
+
+/* NewsLetter section here */
+.newsletter{
+    background: #5D5DFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 4rem;
+}
+.newsletter > div > h4{
+    color: #D9E3EA;
+    font-weight: 800;
+    font-size: 1.7rem;
+    /* margin-bottom: 1rem; */
+}
+.newsletter > form > #email_box{
+    background: #4B4ACF;
+    padding: .6rem 1rem;
+    outline: none;
+    border: 1px solid #ABABFF;
+    color: var(--light-ash);
+    border-radius: .1rem;
+}
+#email_box:focus{
+    outline: none;
+}
+.newsletter > form > button {
+    font-family: inherit;
+    padding: .6rem 1rem;
+    border: none;
+    color: #4B4ACF;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: .1rem;
+}
+/* Footer starts here */
+
+footer .four-col-section{
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+footer .col-one{
+    flex: 0 0 260px;
+}
+footer .col-one > ul > li > a{
+    text-decoration: none;
+    color: #9BA9B4;
+    display: block;
+    margin: .4rem 0
+}
+footer .bottom-bar{
+    display: flex;
+    justify-content: space-between;
+}
+footer .bottom-bar > div > a > i {
+    padding: .4rem;
+    color: #5D5DFF;
+    background: #25282C;
+    border-radius: 50%;
+}
+
+
+/* 
+    Tablet Mode
+*/
+@media  (max-width:992px) {
+    .two_col{
+        justify-content: center;
+    }
+    .testimonial-boxes{
+        justify-content: center;
+        gap: 1rem;
+    }
+    form button{
+        margin: .2rem 0;
+    }
+    footer .four-col-section{
+        justify-content: center;
+    }
+}
+@media (max-width:400px) {
+    body{
+        font-size: 12px;
+    }
+    .two-col-child img{
+        max-width: 250px;
+    }
+    .two-col-child{
+        flex-basis: 300px;
+    }
+
+    .newsletter{
+        flex-direction: column;
+    }
+
+
+    footer .four-col-section {
+        margin: 1rem 0;
+    }
+
+}
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) -------- DONE ------*/
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) -------- DONE ------ */ 
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...}  */
